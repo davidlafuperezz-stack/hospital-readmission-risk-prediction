@@ -99,6 +99,11 @@ print("Accuracy:", accuracy_score(y_test, xgb_pred))
 print("ROC AUC:", roc_auc_score(y_test, xgb_prob))
 print(classification_report(y_test, xgb_pred))
 
+import joblib
+
+joblib.dump(xgb_model, "model.pkl")
+print("Model saved as model.pkl")
+
 #ROC CURVE COMPARISON
 plt.figure()
 
